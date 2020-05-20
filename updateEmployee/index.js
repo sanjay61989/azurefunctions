@@ -2,7 +2,7 @@ const createMongoClient = require('../shared/mongo');
 var ObjectId = require('mongodb').ObjectID;
 module.exports = async function (context, req) {
     const { db, connection } = await createMongoClient();
-    const employeesCollection = db.collection('employees');
+    const employeesCollection = db.collection(process.env.collectionName);
     try {
         if (!(req.body.id && req.body.name && req.body.age)) {
             throw "error";
