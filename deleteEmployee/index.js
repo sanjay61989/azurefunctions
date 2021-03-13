@@ -19,7 +19,7 @@ module.exports = async function (context, req) {
     } catch (error) {
         context.res = {
             status: 500,
-            body: 'Error creating a new employee' + error
+            body: 'Error Deleting a employee' + error
         }
     }
 };

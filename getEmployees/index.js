@@ -14,7 +14,7 @@ module.exports = async function (context, req) {
     } catch (error) {
         context.res = {
             status: 500,
-            body: 'Error creating a new Dish' + error
+            body: 'Error getting employees' + error
         }
     }
 };

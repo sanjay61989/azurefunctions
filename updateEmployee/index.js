@@ -1,8 +1,11 @@
 const createMongoClient = require('../shared/mongo');
 var ObjectId = require('mongodb').ObjectID;
+
 module.exports = async function (context, req) {
     const { db, connection } = await createMongoClient();
     const employeesCollection = db.collection(process.env.collectionName);
+    
+    
     try {
         if (!(req.body.id && req.body.name && req.body.age)) {
             throw "error";
@@ -25,7 +28,7 @@ module.exports = async function (context, req) {
     } catch (error) {
         context.res = {
             status: 500,
-            body: 'Error creating a new employee' + error
+            body: 'Error updating a employee' + error
         }
     }
 };

@@ -93,3 +93,14 @@ obj
 appsettings.json
 local.settings.json
 package-lock.json
+package-lock.json
+.vscode/tasks.json
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/extensions.json
+.vscode/launch.json
+.vscode/settings.json
+.vscode/tasks.json
+package-lock.json
+updateEmployee/sample.dat
